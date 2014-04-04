@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.drag-zone {
+	height: 100px;
+	cursor: pointer;
+}
+.width-960 {
+	max-width: 960px;
+}
+.margin-top-20 {
+	margin-top: 20px;
+}
+.margin-bottom-20 {
+	margin-bottom: 20px;
+}
+.txt-color-red {
+	color: #d9534f;
+}
+.txt-color-green {
+	color: #468847
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
