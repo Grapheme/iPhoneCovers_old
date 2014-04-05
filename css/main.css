@@ -58,10 +58,12 @@ h2.h4 {
 	margin-bottom: 20px;
 }
 .txt-color-red {
-	color: #d9534f;
+	color: #777;
+	font-weight: 300;
 }
 .txt-color-green {
-	color: #468847
+	color: #777;
+	font-weight: 300;
 }
 .image {
     display: none;
@@ -91,9 +93,15 @@ h1 {
 	font-size: 28px;
 	margin: 0 0 1em;
 }
+.wrapper_ {
+	height: 200px;
+	overflow: scroll;
+	width: 180px;
+}
+ul { margin: 0.5em 0; }
+ul li { line-height: 1.8em; font-weight: 400; color: #444; letter-spacing: 1px; font-size: 13px; }
 
-
-
+.glyphicon { margin: 0 0.35em 0 0.25em; }
 
 
 

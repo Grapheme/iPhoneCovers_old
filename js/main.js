@@ -1,5 +1,5 @@
 $('button.submit').on('click', function(){
-	$(this).text('Подождите..');
+	$(this).text('Подождите...');
     var form = $('form').first();
     var formdata = false;
     if (window.FormData){
@@ -82,7 +82,7 @@ function grphm_draw() {
 					$('.download').attr('href', 'php/art/' + data);
 					$('.download').attr('download', data);
 					$('.download')[0].click();
-					$('button.submit').text('Создать');
+					$('button.submit').text('Создать обложку');
 					window.location.reload();
 				}).fail(function(){
 					console.log(data);
@@ -103,7 +103,12 @@ $('.phones-before').on('click', '.sms-send-button', function(){
 	}).done(function(){
 		localStorage.setItem(dataphone, 'after');
 		that.parent().fadeOut(function(){
-			$('.phones-after').append('<li>' + dataphone);
+			if($('.phones-after li').index() == -1)
+			{
+				$('.phones-after').prepend('<li>' + dataphone);
+			} else {
+				$('.phones-after li').first().before('<li>' + dataphone);
+			}
 		});
 	}).fail(function(data){
 		console.log(data);
@@ -124,15 +129,15 @@ for(var i in localStorage)
 	
 	if(localStorage[i] == 'before')
 	{
-		$('.phones-before').append('<li class="sms-send" data-phone="' + i + '">' + i + ' <span class="glyphicon glyphicon-remove txt-color-red sms-clear"></span><span class="glyphicon glyphicon-ok txt-color-green sms-send-button"></span></li>');
+		$('.phones-before').prepend('<li class="sms-send" data-phone="' + i + '">' + i + ' <span class="glyphicon glyphicon-ok txt-color-green sms-send-button"></span><span class="glyphicon glyphicon-remove txt-color-red sms-clear"></span></li>');
 		count_before++;
 	}
-	$('.count-before').text(count_before);
+	$('.count-before').html(count_before);
 
 	if(localStorage[i] == 'after')
 	{
-		$('.phones-after').append('<li>' + i);
+		$('.phones-after').prepend('<li>' + i);
 		count_after++;
 	}
-	$('.count-after').text(count_after);
+	$('.count-after').html(count_after);
 }
