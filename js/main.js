@@ -102,7 +102,9 @@ $('.phones-before').on('click', '.sms-send-button', function(){
 		type: 'post'
 	}).done(function(){
 		localStorage.setItem(dataphone, 'after');
-		that.parent().fadeOut();
+		that.parent().fadeOut(function(){
+			$('.phones-after').append('<li>' + dataphone);
+		});
 	}).fail(function(data){
 		console.log(data);
 	});
@@ -115,10 +117,11 @@ $('.phones-before').on('click', '.sms-clear', function(){
 	that.parent().fadeOut();
 });
 
-
+var count_before = 0;
+var count_after = 0;
 for(var i in localStorage)
 {
-	var count_before = 0;
+	
 	if(localStorage[i] == 'before')
 	{
 		$('.phones-before').append('<li class="sms-send" data-phone="' + i + '">' + i + ' <span class="glyphicon glyphicon-remove txt-color-red sms-clear"></span><span class="glyphicon glyphicon-ok txt-color-green sms-send-button"></span></li>');
@@ -126,7 +129,6 @@ for(var i in localStorage)
 	}
 	$('.count-before').text(count_before);
 
-	var count_after = 0;
 	if(localStorage[i] == 'after')
 	{
 		$('.phones-after').append('<li>' + i);

@@ -61,19 +61,14 @@ for($i = 0; $i < 4; $i++)
 	imagecopyresized($new, $im, $x, $y, $crop, $crop_y, $photo_ratio_w, $photo_h, $size[0], $size[1]);
 }
 
-if($_POST['type'] == '4s' || $_POST['type'] == '5s' )
-{
-	$chester_size = array(100, 80);
-	$chester_path = '../img/chester.png';
-} else {
-	$chester_size = array(100, 98);
-	$chester_path = '../img/chester_3D.png';
-}
+$chester_size = array(125, 123);
+$chester_path = '../img/chester.png';
 
 
 $chester_img = imagecreatefrompng($chester_path);
 $chester_margin = $case_w - 100 - $chester_size[0];
-imagecopy($new, $chester_img, $chester_margin, 0, 0, 0, $chester_size[0], $chester_size[1]);
+$chester_margin_top = $case_h - $chester_size[1];
+imagecopy($new, $chester_img, $chester_margin, $chester_margin_top, 0, 0, $chester_size[0], $chester_size[1]);
 
 $new_name = time().".png";
 imagepng($new, 'art/'.$new_name);
