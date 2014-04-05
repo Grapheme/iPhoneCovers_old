@@ -20,7 +20,13 @@
 .txt-color-green {
 	color: #468847
 }
-
+.image {
+    display: none;
+}
+.download {
+	position: absolute;
+	text-indent: -9999px;
+}
 
 
 

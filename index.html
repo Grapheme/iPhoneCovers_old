@@ -26,53 +26,64 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
+    <img id="image-1" class="image">
+    <img id="image-2" class="image">
+    <img id="image-3" class="image">
+    <img id="image-4" class="image">
+    <a href="#" class="download">Download</a>
+
+
     <div class="container width-960">
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-xs-8  col-sm-8  col-md-8  col-lg-8">
 
           <div class="drag-zone bg-info margin-bottom-20">
-
+            <form action="php/upload.php">
+                <label>Файл:</label>
+                <input type="file" name="photo">
+            </form>
           </div>
 
           <form role="form">
 
             <div class="form-group">
-              <input type="email" class="form-control" id="telNumber" placeholder="Номер телефона">
+              <input type="text" name="phonenum" class="form-control" id="telNumber" placeholder="Номер телефона" value="+7">
             </div>
 
             <div class="form-group text-center">
 
               <div class="radio-inline">
                 <label>
-                  <input type="radio" name="optionsRadios" id="view4" value="">
+                  <input type="radio" name="type" id="view4" value="4s">
                   iPhone 4
                 </label>
               </div>
 
               <div class="radio-inline">
                 <label>
-                  <input type="radio" name="optionsRadios" id="view43d" value="">
+                  <input type="radio" name="type" id="view43d" value="4s3d">
                   iPhone 4 with 3D
                 </label>
               </div>
 
               <div class="radio-inline">
                 <label>
-                  <input type="radio" name="optionsRadios" id="view5" value="">
+                  <input type="radio" name="type" id="view5" value="5s">
                   iPhone 5
                 </label>
               </div>
 
               <div class="radio-inline">
                 <label>
-                  <input type="radio" name="optionsRadios" id="view53d" value="">
+                  <input type="radio" name="type" id="view53d" value="5s3d">
                   iPhone 5 with 3D
                 </label>
               </div>
 
               <div class="margin-top-20">
-                <button type="button" class="btn btn-primary">Отправить</button>
+                <button type="button" class="btn btn-primary submit">Создать</button>
               </div>
 
             </div>
@@ -82,20 +93,15 @@
         </div>
         <div class="col-xs-4  col-sm-4  col-md-4  col-lg-4">
 
-          <h2 class="h4">В обработке(n)</h2>
+          <h2 class="h4">В обработке (<span class="count-before"></span>)</h2>
 
-          <ul class="list-unstyled margin-bottom-20">
-            <li>+79289999999 <span class="glyphicon glyphicon-remove txt-color-red"></span></li>
-            <li>+79289999999 <span class="glyphicon glyphicon-remove txt-color-red"></span></li>
-            <li>+79289999999 <span class="glyphicon glyphicon-remove txt-color-red"></span></li>
+          <ul class="list-unstyled margin-bottom-20 phones-before">
+            
           </ul>
 
-          <h2 class="h4">Готовые(n)</h2>
+          <h2 class="h4">Готовые (<span class="count-after"></span>)</h2>
 
-          <ul class="list-unstyled margin-bottom-20">
-            <li>+79289999999 <span class="glyphicon glyphicon-ok txt-color-green"></span></li>
-            <li>+79289999999 <span class="glyphicon glyphicon-ok txt-color-green"></span></li>
-            <li>+79289999999 <span class="glyphicon glyphicon-ok txt-color-green"></span></li>
+          <ul class="list-unstyled margin-bottom-20 phones-after">
           </ul>
        </div>
       </div>
@@ -103,6 +109,7 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/camanjs/4.0.0/caman.full.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
