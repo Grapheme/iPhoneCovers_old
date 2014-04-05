@@ -14,6 +14,9 @@ input[type=radio] {
 	position: relative;
 	top: -2px;
 }
+input[type=text] {
+	letter-spacing: 1px;
+}
 h2.h4 {
 	font-size: 16px;
 	font-weight: 300;
@@ -68,7 +71,7 @@ h2.h4 {
 	text-indent: -9999px;
 }
 
-.btn-primary {
+.btn-primary1, .btn-primary1:hover {
 	background-color: #4d90fe;
 	background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
 	border: 0;
@@ -77,6 +80,9 @@ h2.h4 {
 	height: 38px;
 	vertical-align: top;
 	width: 160px;
+	color: #fff !important;
+	font-weight: 300;
+	letter-spacing: 0.5px;
 }
 
 h1 {
