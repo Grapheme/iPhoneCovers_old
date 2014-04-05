@@ -1,9 +1,49 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body {
+	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	color: #333;
+	font-size: 12px;
+	font-weight: 300;
+}
+label {
+	font-weight: 500;
+}
+input[type=radio] {
+	position: relative;
+	top: -2px;
+}
+h2.h4 {
+	font-size: 16px;
+	font-weight: 300;
+	color: #3a84df;
+	position: relative;
+	margin: 0 0 1em;
+}
+.h4 .count-before, .h4 .count-after {
+	background: #3a84df;
+	color: #fff;
+	font-size: 12px;
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	text-align: center;
+	line-height: 24px;
+	position: relative;
+	border-radius: 50%;
+	top: -10px;
+	opacity: 0.8;
+	left: 5px;
+}
 .drag-zone {
-	height: 100px;
+	height: 130px;
 	cursor: pointer;
+	padding: 40px 25px 60px;
+	border: 1px solid #e0e0e0;
+	border-radius: 2px;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.3),0 3px 12px -3px rgba(0,0,0,0.0);
+	background: #fafafa;
 }
 .width-960 {
 	max-width: 960px;
@@ -28,9 +68,23 @@
 	text-indent: -9999px;
 }
 
+.btn-primary {
+	background-color: #4d90fe;
+	background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+	border: 0;
+	border-radius: 2px;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+	height: 38px;
+	vertical-align: top;
+	width: 160px;
+}
 
-
-
+h1 {
+	color: #666;
+	font-weight: 300;
+	font-size: 28px;
+	margin: 0 0 1em;
+}
 
 
 
